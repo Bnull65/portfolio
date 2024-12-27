@@ -1,0 +1,214 @@
+/* Общие стили */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a2a3a; /* Темно-синий фон */
+  color: #f4f4f4;
+  background-image: url('background.jpg'); /* Добавьте подходящее изображение */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Хедер */
+header {
+  background: rgba(38, 49, 68, 0.9); /* Прозрачный темный фон */
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  color: #00bcd4;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+header ul li a {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+header ul li a:hover {
+  background: #00bcd4;
+  color: #1a2a3a;
+  border-radius: 4px;
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 8rem 1rem;
+  background: linear-gradient(to bottom, rgba(44, 62, 80, 0.8), rgba(41, 128, 185, 0.6));
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative; /* Для управления слоями */
+  z-index: 0; /* Задний слой */
+}
+
+#hero h1 span {
+  color: #b205fd;
+}
+
+#hero p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  color: #bdc3c7;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://miro.medium.com/v2/resize:fit:1400/1*6vpd-WOFhR7jY9GcJus50w.gif); /* Укажите ссылку на гифку */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; /* Затемнение гифки */
+  z-index: -1; /* Помещаем гифку на задний фон */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* Поверх гифки */
+}
+
+/* Проекты */
+#projects {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #1a2a3a; /* Темный фон */
+  position: relative;
+  z-index: 1; /* Перекрываем фон из других секций */
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #00bcd4;
+  font-size: 2.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #34495e;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #04fe1d;
+}
+
+.card p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #bdc3c7;
+}
+
+.card a {
+  text-decoration: none;
+  color: #00bcd4;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 2px solid #00bcd4;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.card a:hover {
+  background: #00bcd4;
+  color: #1a2a3a;
+}
+
+/* Контакты */
+#contact {
+  background: #2980b9;
+  color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+#contact form {
+  margin-top: 2rem;
+}
+
+#contact input, #contact textarea {
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background: #34495e;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#contact button {
+  padding: 0.75rem 1.5rem;
+  background: #8e44ad;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#contact button:hover {
+  background: #9b59b6;
+}
+
+/* Footer */
+footer {
+  background: #263144;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
